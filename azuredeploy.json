@@ -85,26 +85,7 @@
         "serverFarmId":"[parameters('hostingPlanName')]"
       },
       "resources":[
-       { 
-           "apiVersion": "2014-04-01", 
-           "type": "config", 
-           "name": "web", 
-           "dependsOn": [ 
-             "[concat('Microsoft.Web/Sites/', parameters('siteName'))]" 
-           ], 
-           "properties": { 
-             "webSocketsEnabled": true,
-             "virtualApplications": [
-              {
-                "virtualPath": "/",
-                "physicalPath": "site\\wwwroot\\Server",
-                "preloadEnabled": true,
-                "virtualDirectories": null
-              }
-             ]
-           }
-       },
-       {
+        {
           "apiVersion":"2015-04-01",
           "name":"web",
           "type":"sourcecontrols",
@@ -115,6 +96,26 @@
             "RepoUrl":"[parameters('repoURL')]",
             "branch": "[parameters('branch')]",
             "IsManualIntegration":true
+          }
+        },
+        { 
+          "apiVersion": "2014-04-01", 
+          "type": "config", 
+          "name": "web", 
+          "dependsOn": [ 
+            "[concat('Microsoft.Web/Sites/', parameters('siteName'))]",
+            "web/sourcecontrols" 
+          ], 
+          "properties": { 
+            "webSocketsEnabled": true,
+            "virtualApplications": [
+              {
+                "virtualPath": "/",
+                "physicalPath": "site\\wwwroot\\Server",
+                "preloadEnabled": true,
+                "virtualDirectories": null
+              }
+            ]
           }
         }
       ]
