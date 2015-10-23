@@ -98,7 +98,7 @@
               {
                 "virtualPath": "/",
                 "physicalPath": "site\\wwwroot\\Server",
-                "preloadEnabled": false,
+                "preloadEnabled": true,
                 "virtualDirectories": null
               }
              ]
