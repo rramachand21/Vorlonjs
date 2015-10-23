@@ -46,7 +46,7 @@ export module VORLON {
                 this.proxyPort = process.env.PORT;  
             else
                 this.proxyPort = catalog.proxyPort || 5050;         
-            this.port = process.env.PORT || catalog.port || 1337;
+            this.port = 80 || process.env.PORT || catalog.port || 1337;
             this.proxyPort = catalog.proxyPort || 5050;
             this.enableWebproxy = catalog.enableWebproxy || false;
             this.vorlonServerURL = catalog.vorlonServerURL || "";
