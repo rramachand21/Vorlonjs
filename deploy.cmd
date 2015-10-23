@@ -2,7 +2,7 @@
 
 :: ----------------------
 :: KUDU Deployment Script
-:: Version: 0.1.13
+:: Version: 1.0.4
 :: ----------------------
 
 :: Prerequisites
