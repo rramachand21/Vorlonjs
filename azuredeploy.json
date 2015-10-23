@@ -103,7 +103,8 @@
           "type": "config", 
           "name": "web", 
           "dependsOn": [
-            "[resourceId('Microsoft.Web/sites/sourcecontrols','web')]" 
+            "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]",
+            "[concat('Microsoft.Web/Sites/', parameters('siteName'), '/sourcecontrols/web')]"
           ], 
           "properties": { 
             "webSocketsEnabled": true,
@@ -121,4 +122,3 @@
     }
   ]
 }
-
