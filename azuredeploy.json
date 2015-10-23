@@ -102,9 +102,8 @@
           "apiVersion": "2014-04-01", 
           "type": "config", 
           "name": "web", 
-          "dependsOn": [ 
-            "[concat('Microsoft.Web/Sites/', parameters('siteName'))]",
-            "web/sourcecontrols" 
+          "dependsOn": [
+            "[resourceId('web/sourcecontrols')]" 
           ], 
           "properties": { 
             "webSocketsEnabled": true,
