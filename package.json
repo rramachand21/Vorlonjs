@@ -50,8 +50,7 @@
     "build-server": "gulp --gulpfile=./Server/gulpfile.js --cwd=./Server",
     "build-client": "gulp --gulpfile=./Plugins/gulpfile.js --cwd=./Plugins",
     "build": "node disclaimer.js && npm run global-deploy-gulp && npm run global-deploy-gulp-cli && npm run build-client && npm run build-server",
-    "prepublish": "npm run build",
-    "start": "node ./Server/server.js"
+    "prepublish": "npm run build"
   },
   "bin": {
     "vorlon": "./bin/vorlon"
