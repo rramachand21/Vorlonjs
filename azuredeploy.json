@@ -101,7 +101,13 @@
                 "preloadEnabled": false,
                 "virtualDirectories": null
               }
-             ]
+             ],
+             "appSettings": [
+              {
+                "Name": "DUMMY_APP_SETTING",
+                "Value": "DUMMY_VALUE"
+              }
+            ]
            }
        },
        {
