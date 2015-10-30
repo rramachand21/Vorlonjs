@@ -107,7 +107,9 @@
                 "Name": "DUMMY_APP_SETTING",
                 "Value": "DUMMY_VALUE"
               }
-            ]
+            ],
+            "requestTracingEnabled": true,
+            "httpLoggingEnabled": true
            }
        },
        {
